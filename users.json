@@ -1,0 +1,57 @@
+[
+  {
+    "_id": "665f9a009f1a2a4f8d7e1900",
+    "name": "Carlos López",
+    "email": "carlos@example.com",
+    "password": "$2a$10$abcdef1234567890",
+    "rol": "user",
+    "phone": "611223344",
+    "adress": "Calle Falsa 123, Madrid",
+    "profilepicture": "",
+    "cart": ["665f9a309f1a2a4f8d7e1911"]
+  },
+  {
+    "_id": "665f9a109f1a2a4f8d7e1901",
+    "name": "Laura Gómez",
+    "email": "laura@example.com",
+    "password": "$2a$10$123456abcdef7890",
+    "rol": "user",
+    "phone": "622334455",
+    "adress": "Av. Siempre Viva 742, Barcelona",
+    "profilepicture": "",
+    "cart": []
+  },
+  {
+    "_id": "665f9a209f1a2a4f8d7e1902",
+    "name": "David Ruiz",
+    "email": "david@example.com",
+    "password": "$2a$10$qwerty0987654321",
+    "rol": "user",
+    "phone": "633445566",
+    "adress": "Calle Luna 8, Sevilla",
+    "profilepicture": "",
+    "cart": ["665f9a609f1a2a4f8d7e1914"]
+  },
+  {
+    "_id": "665f9a309f1a2a4f8d7e1903",
+    "name": "Marta Fernández",
+    "email": "marta@example.com",
+    "password": "$2a$10$zxcvbn1234567890",
+    "rol": "user",
+    "phone": "644556677",
+    "adress": "Calle Sol 25, Valencia",
+    "profilepicture": "",
+    "cart": []
+  },
+  {
+    "_id": "665f9a409f1a2a4f8d7e1904",
+    "name": "Iván Martínez",
+    "email": "ivan@example.com",
+    "password": "$2a$10$passpass12345678",
+    "rol": "admin",
+    "phone": "655667788",
+    "adress": "Plaza Mayor 1, Bilbao",
+    "profilepicture": "",
+    "cart": ["665f9aa09f1a2a4f8d7e1918"]
+  }
+]

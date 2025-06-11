@@ -1,0 +1,92 @@
+[
+    {
+      "_id": "665cb23f1e14c2a9f4301a01",
+      "name": "Ethiopian Yirgacheffe",
+      "description": "A floral and citrusy single-origin coffee with bright acidity and delicate body.",
+      "imageUrl": "https://res.cloudinary.com/demo/image/upload/ethiopian_yirgacheffe.jpg",
+      "origin": {
+        "country": "Ethiopia",
+        "region": "Yirgacheffe",
+        "latitude": 6.162,
+        "longitude": 38.205
+      },
+      "type": "beans",
+      "price": 14.99,
+      "stock": 120,
+      "createdBy": "665cb23f1e14c2a9f4301111",
+      "createdAt": "2025-06-01T10:30:00Z",
+      "updatedAt": "2025-06-05T12:00:00Z"
+    },
+    {
+      "_id": "665cb23f1e14c2a9f4301a02",
+      "name": "Colombian Supremo",
+      "description": "Balanced and smooth with notes of chocolate and caramel. Grown in the Andean mountains.",
+      "imageUrl": "https://res.cloudinary.com/demo/image/upload/colombian_supremo.jpg",
+      "origin": {
+        "country": "Colombia",
+        "region": "Huila",
+        "latitude": 2.535,
+        "longitude": -75.527
+      },
+      "type": "ground",
+      "price": 12.5,
+      "stock": 85,
+      "createdBy": "665cb23f1e14c2a9f4301222",
+      "createdAt": "2025-05-20T09:15:00Z",
+      "updatedAt": "2025-06-04T11:20:00Z"
+    },
+    {
+      "_id": "665cb23f1e14c2a9f4301a03",
+      "name": "Guatemala Antigua",
+      "description": "Rich and full-bodied with a smoky flavor and hints of cocoa. Ideal for espresso lovers.",
+      "imageUrl": "https://res.cloudinary.com/demo/image/upload/guatemala_antigua.jpg",
+      "origin": {
+        "country": "Guatemala",
+        "region": "Antigua",
+        "latitude": 14.559,
+        "longitude": -90.734
+      },
+      "type": "capsules",
+      "price": 16,
+      "stock": 60,
+      "createdBy": "665cb23f1e14c2a9f4301333",
+      "createdAt": "2025-04-28T08:45:00Z",
+      "updatedAt": "2025-05-30T14:10:00Z"
+    },
+    {
+      "_id": "665cb23f1e14c2a9f4301a04",
+      "name": "Kenya AA",
+      "description": "Vibrant acidity and berry undertones. Grown in the high-altitude regions of Kenya.",
+      "imageUrl": "https://res.cloudinary.com/demo/image/upload/kenya_aa.jpg",
+      "origin": {
+        "country": "Kenya",
+        "region": "Nyeri",
+        "latitude": -0.416,
+        "longitude": 36.951
+      },
+      "type": "beans",
+      "price": 17.75,
+      "stock": 100,
+      "createdBy": "665cb23f1e14c2a9f4301444",
+      "createdAt": "2025-06-07T14:00:00Z",
+      "updatedAt": "2025-06-08T15:30:00Z"
+    },
+    {
+      "_id": "665cb23f1e14c2a9f4301a05",
+      "name": "Costa Rica Tarrazú",
+      "description": "A bright and aromatic coffee with a clean finish and hints of tropical fruit.",
+      "imageUrl": "https://res.cloudinary.com/demo/image/upload/costa_rica_tarrazú.jpg",
+      "origin": {
+        "country": "Costa Rica",
+        "region": "Tarrazú",
+        "latitude": 9.651,
+        "longitude": -84.015
+      },
+      "type": "ground",
+      "price": 13.95,
+      "stock": 90,
+      "createdBy": "665cb23f1e14c2a9f4301555",
+      "createdAt": "2025-05-15T13:50:00Z",
+      "updatedAt": "2025-06-10T10:00:00Z"
+    }
+]

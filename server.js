@@ -25,7 +25,7 @@ const handleErrors = require("./errors")
 handleErrors(app);
 
 // ℹ️ Defines the server port (default: 5005)
-const PORT = process.env.PORT || 5005;
+const PORT = process.env.PORT || 8002;
 
 app.listen(PORT, () => {
   console.log(`Server listening. Local access on http://localhost:${PORT}`);

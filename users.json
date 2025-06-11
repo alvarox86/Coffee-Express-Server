@@ -48,7 +48,7 @@
     "name": "Iván Martínez",
     "email": "ivan@example.com",
     "password": "$2a$10$passpass12345678",
-    "rol": "admin",
+    "rol": "vendor",
     "phone": "655667788",
     "adress": "Plaza Mayor 1, Bilbao",
     "profilepicture": "",

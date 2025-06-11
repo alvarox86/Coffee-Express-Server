@@ -1,10 +1,15 @@
-// ❗This is an example of a User Model. 
-// TODO: Please make sure you edit the User model to whatever makes sense in your project.
-
 const { Schema, model } = require("mongoose");
 
 const userSchema = new Schema(
   {
+    username:{
+      type:String,
+      required:[true, 'User name is required.']
+    },
+    phone:{
+      type:String,
+      trim: true
+    },
     email: {
       type: String,
       required: [true, 'Email is required.'],
@@ -15,10 +20,22 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: [true, 'Password is required.']
+    },
+    rol:{
+      type: String,
+      enum:["user","admin","vendor","superAdmin"],
+      default:"user",
+      required:true
+    },
+    adress:{
+      type:String
+    },
+    profilepicture:{
+      type:String,
+      default:""
     }
   },
   {
-    // this second object adds extra properties: `createdAt` and `updatedAt`    
     timestamps: true
   }
 );

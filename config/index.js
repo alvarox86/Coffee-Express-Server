@@ -1,7 +1,7 @@
 const express = require("express");
 
 // ℹ️ Logs incoming requests and responses to the terminal (useful for debugging)
-const logger = require("morgan");
+const morgan = require("morgan");
 
 // ℹ️ Allows the server to accept requests from different origins (e.g., frontend apps)
 // CORS (Cross-Origin Resource Sharing) enables secure cross-origin requests.
@@ -15,12 +15,12 @@ function config(app) {
   // ℹ️ Configures CORS to allow requests only from the specified origin
   app.use(
     cors({
-      origin: [process.env.ORIGIN]
+      origin: [process.env.ORIGIN, process.env.PORT]
     })
   );
   
   // ℹ️ Logs requests in the development environment
-  app.use(logger("dev")); 
+  app.use(morgan("dev")); 
 
   // ℹ️ Parses incoming JSON requests
   app.use(express.json()); 

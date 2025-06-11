@@ -3,7 +3,7 @@
 function handleErrors(app) {
   
   // ℹ️ Handles requests to undefined routes (404 Not Found)
-  app.use((req, res, next) => {
+  app.use("*",(req, res, next) => {
     res.status(404).json({ message: "This route does not exist" });
   });
 

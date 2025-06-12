@@ -18,4 +18,17 @@ function verifyToken(req,res,next){
   }
 }
 
-module.exports = verifyToken
+function verifyAdmin(req, res, next) {
+
+  if (req.payload.rol === "vendor") {
+    next() 
+  } else {
+    res.status(401).json({errorMessage: "Este usuario no es vendor"})
+  }
+
+}
+
+module.exports = {
+  verifyAdmin,
+  verifyToken
+}

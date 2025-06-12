@@ -11,8 +11,8 @@ const productSchema = new Schema(
     },
     imageUrl: {
       type: String,
-      required: [true, 'Image is required.'],
-      trim: true
+      trim: true,
+      default:""
     },
     origin: {
       country: {

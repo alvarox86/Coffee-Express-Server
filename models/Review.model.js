@@ -11,7 +11,7 @@ const reviewSchema = new Schema(
       type:String,
       required:true
     },
-    user:{
+    username:{
         type: Schema.Types.ObjectId, 
         ref: 'User'
     },

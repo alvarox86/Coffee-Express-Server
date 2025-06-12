@@ -1,6 +1,5 @@
 [
   {
-    "_id": "665cb23f1e14c2a9f4301a01",
     "name": "Ethiopian Yirgacheffe",
     "description": "A floral and citrusy single-origin coffee with bright acidity and delicate body.",
     "imageUrl": "",
@@ -18,7 +17,6 @@
     "updatedAt": "2025-06-05T12:00:00Z"
   },
   {
-    "_id": "665cb23f1e14c2a9f4301a02",
     "name": "Colombian Supremo",
     "description": "Balanced and smooth with notes of chocolate and caramel. Grown in the Andean mountains.",
     "imageUrl": "",
@@ -36,7 +34,6 @@
     "updatedAt": "2025-06-04T11:20:00Z"
   },
   {
-    "_id": "665cb23f1e14c2a9f4301a03",
     "name": "Guatemala Antigua",
     "description": "Rich and full-bodied with a smoky flavor and hints of cocoa. Ideal for espresso lovers.",
     "imageUrl": "",
@@ -54,7 +51,6 @@
     "updatedAt": "2025-05-30T14:10:00Z"
   },
   {
-    "_id": "665cb23f1e14c2a9f4301a04",
     "name": "Kenya AA",
     "description": "Vibrant acidity and berry undertones. Grown in the high-altitude regions of Kenya.",
     "imageUrl": "",
@@ -72,7 +68,6 @@
     "updatedAt": "2025-06-08T15:30:00Z"
   },
   {
-    "_id": "665cb23f1e14c2a9f4301a05",
     "name": "Costa Rica Tarraz",
     "description": "A bright and aromatic coffee with a clean finish and hints of tropical fruit.",
     "imageUrl": "",

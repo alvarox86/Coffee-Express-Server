@@ -20,4 +20,8 @@ router.use("/review", reviewRouter)
 const authRouter = require("./auth.routes")
 router.use("/auth", authRouter)
 
+const uploadRoutes = require("./upload.routes");
+router.use("/upload", uploadRoutes);
+
+
 module.exports = router;

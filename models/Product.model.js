@@ -12,7 +12,7 @@ const productSchema = new Schema(
     imageUrl: {
       type: String,
       trim: true,
-      default:""
+      default:"https://res.cloudinary.com/dotfm1go0/image/upload/v1749917582/default-image_600_u1nizl.webp"
     },
     origin: {
       country: {

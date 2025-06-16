@@ -18,7 +18,7 @@ router.patch("/:userId", async(req,res,next) =>{
             username:req.body.username,
             phone:req.body.phone,
             adress:req.body.adress,
-            profilepicture:req.body.profilepicture
+            profilepicture:req.body.profilepicture || "https://res.cloudinary.com/dotfm1go0/image/upload/v1749833868/1361728_qxjjh8.png"
         })
         res.status(200).json(response)
     } catch (error) {

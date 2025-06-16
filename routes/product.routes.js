@@ -10,7 +10,7 @@ router.post("/",verifyToken,verifyAdmin, async(req,res,next) =>{
         const response = await Product.create({
             name:req.body.name,
             description:req.body.description,
-            imageUrl:req.body.imageUrl,
+            imageUrl:req.body.imageUrl || "https://res.cloudinary.com/dotfm1go0/image/upload/v1749917582/default-image_600_u1nizl.webp",
             origin:req.body.origin,
             country:req.body.origin.country,
             region:req.body.origin.region,
@@ -54,7 +54,7 @@ router.put("/:productId", async(req,res,next) =>{
         const response = await Product.findByIdAndUpdate(req.params.productId,{
             name:req.body.name,
             description:req.body.description,
-            imageUrl:req.body.imageUrl,
+            imageUrl:req.body.imageUrl || "https://res.cloudinary.com/dotfm1go0/image/upload/v1749917582/default-image_600_u1nizl.webp",
             origin:req.body.origin,
             country:req.body.origin.country,
             region:req.body.origin.region,

@@ -32,6 +32,10 @@ const userSchema = new Schema(
     profilepicture:{
       type:String,
       default:"https://res.cloudinary.com/dotfm1go0/image/upload/v1749833868/1361728_qxjjh8.png"
+    },
+    cart:{
+      type:[Schema.Types.ObjectId],
+      ref:"Product"
     }
   },
   {

@@ -23,7 +23,7 @@ function verifyAdmin(req, res, next) {
   if (req.payload.rol === "vendor") {
     next() 
   } else {
-    res.status(401).json({errorMessage: "Este usuario no es vendor"})
+    res.status(403).json({errorMessage: "Access denied: vendor role required"})
   }
 
 }

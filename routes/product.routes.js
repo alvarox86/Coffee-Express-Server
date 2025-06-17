@@ -5,7 +5,7 @@ const Product = require("../models/Product.model")
 const {verifyAdmin, verifyToken} = require("../middlewares/auth.middlewares")
 
 //Ruta para crear un producto
-router.post("/",verifyToken,verifyAdmin, async(req,res,next) =>{
+router.post("/",verifyToken, verifyAdmin, async(req,res,next) =>{
     try {
         const response = await Product.create({
             name:req.body.name,
@@ -49,7 +49,16 @@ router.get("/:productId", async(req,res,next) =>{
     }
 })
 
-router.put("/:productId", async(req,res,next) =>{
+router.get("/:productId/modify", verifyToken, verifyAdmin, async(req,res,next) =>{
+    try {
+        const response = await Product.findById(req.params.productId)
+        res.status(200).json(response)
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+router.put("/:productId", verifyToken, verifyAdmin, async(req,res,next) =>{
     try {
         const response = await Product.findByIdAndUpdate(req.params.productId,{
             name:req.body.name,
@@ -70,7 +79,7 @@ router.put("/:productId", async(req,res,next) =>{
     }
 })
 
-router.delete("/:productId", async(req,res,next) =>{
+router.delete("/:productId", verifyToken, verifyAdmin, async(req,res,next) =>{
     try {
         const response = await Product.findByIdAndDelete(req.params.productId)
         res.status(200).json(response)

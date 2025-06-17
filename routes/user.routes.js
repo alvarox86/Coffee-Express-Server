@@ -3,9 +3,8 @@ const router = express.Router()
 
 const User = require("../models/User.model")
 const {verifyToken} = require("../middlewares/auth.middlewares")
-const Product = require("../models/Product.model")
 
-router.get("/",verifyToken, async(req,res,next) =>{
+router.get("/",verifyToken, async(req,res,next) =>{//En esta llamada no se hace populate del carrito para simplicar la transferencia de datos. Para obtener los datos del carro ruta : /cart 
     try {
         const response = await User.findById(req.payload._id)
         res.status(200).json(response)
@@ -47,6 +46,18 @@ router.patch("/cart/:productId/add", verifyToken, async(req,res,next) => {
     try {
         const response = await User.findByIdAndUpdate(req.payload._id,
             {$push:{cart:req.params.productId}},
+            {new:true}
+        )
+        res.status(201).json(response)
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+router.patch("/cart/:productId/remove", verifyToken, async(req,res,next) => {
+    try {
+        const response = await User.findByIdAndUpdate(req.payload._id,
+            {$pull:{cart:req.params.productId}},
             {new:true}
         )
         res.status(201).json(response)

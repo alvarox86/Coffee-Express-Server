@@ -56,11 +56,21 @@ router.patch("/cart/:productId/add", verifyToken, async(req,res,next) => {
 
 router.patch("/cart/:productId/remove", verifyToken, async(req,res,next) => {
     try {
-        const response = await User.findByIdAndUpdate(req.payload._id,
-            {$pull:{cart:req.params.productId}},
-            {new:true}
-        )
-        res.status(201).json(response)
+        const response = await User.findById(req.payload._id)
+        .select({cart:1})
+        //1. Mostramos el carrito del usuario con los valores que tiene en el array
+        console.log(response.cart)//Este es el carrito del user
+        const index = response.cart.indexOf(req.params.productId)
+        //2. Editamos el carrito para poder eliminar el producto que el usuario indica
+        response.cart.splice(index, 1)
+        console.log(response.cart)
+        //3. Enviamos de nuevo a la base de datos el carrito(array) actualizado
+
+        await User.findByIdAndUpdate(req.payload._id,{
+            cart:response.cart
+        })
+
+        res.status(201).json(response.cart)
     } catch (error) {
         console.log(error)
     }

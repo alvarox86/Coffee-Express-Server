@@ -13,13 +13,13 @@ router.post("/signup", async(req,res,next) => {
     const {email, password, username, phone, rol, adress, profilepicture} = req.body
 
     if (!username || !email || !password) {
-        res.status(400).json({ errorMessage: "Todos los campos son obligatorios (name, email, password)" })
+        res.status(400).json({ errorMessage: "All fields are required" })
         return;
     }
 
     let regexPassword = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/
     if (regexPassword.test(password) === false) {
-        res.status(400).json({ errorMessage: "La contraseña no es valida. Debe contener al menos una letra, un numero, un caracter especial y tener entre 8 y 16 caracteres." })
+        res.status(400).json({ errorMessage: "The password is invalid. It must contain at least one letter, one number, one special character, and be between 8 and 16 characters long." })
     return;
     }
 
@@ -27,7 +27,7 @@ router.post("/signup", async(req,res,next) => {
         const foundUser = await User.findOne({email:email})
 
         if (foundUser !== null) {
-            res.status(400).json({ errorMessage: "Ya existe un usuario con ese correo electronico" })
+            res.status(400).json({ errorMessage: "There is already a user with that email address." })
             return;
         }
 
@@ -51,12 +51,11 @@ router.post("/signup", async(req,res,next) => {
 })
 
 router.post("/login", async(req,res,next) => {
-    console.log("Todo Ok")
 
     const {email, password} = req.body
 
     if (!email || !password) {
-        res.status(400).json({ errorMessage: "Todos los campos son obligatorios (email, password)" })
+        res.status(400).json({ errorMessage: "All fields are required" })
         return;
     }
 
@@ -64,13 +63,13 @@ router.post("/login", async(req,res,next) => {
         const foundUser = await User.findOne({email:email})
 
         if (foundUser === null) {
-            res.status(400).json({ errorMessage: "Usuario no registrado" })
+            res.status(400).json({ errorMessage: "Unregistered user" })
             return;
         }
 
         const isPasswordCorrect = await bcrypt.compare( password, foundUser.password )
         if (isPasswordCorrect === false) {
-            res.status(400).json({ errorMessage: "La contraseña no es válida" })
+            res.status(400).json({ errorMessage: "The password is not valid" })
             return;
         }
 

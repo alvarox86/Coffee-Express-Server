@@ -14,7 +14,7 @@ router.post("/",verifyToken, async(req,res,next) =>{
         })
         res.status(201).json(response)
     } catch (error) {
-        console.log(error)
+         next(error)
     }
 })
 
@@ -25,7 +25,7 @@ router.get("/", async(req,res,next)=>{
         .populate("product")
         res.status(201).json(response)
     } catch (error) {
-        console.log(error)
+         next(error)
     }
 })
 
@@ -36,7 +36,7 @@ router.get("/product/:productId", async(req,res,next)=>{
         .populate("username", "username")
         res.status(201).json(response)
     } catch (error) {
-        console.log(error)
+         next(error)
     }
 })
 
@@ -45,7 +45,7 @@ router.delete("/:reviewId", async(req,res,next) => {
         await Review.findByIdAndDelete(req.params.reviewId)
         res.sendStatus(202)
     } catch (error) {
-        console.log(error)
+         next(error)
     }
 })
 

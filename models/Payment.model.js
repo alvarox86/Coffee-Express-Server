@@ -1,5 +1,3 @@
-// in "models/Payment.model.js"
-
 const mongoose = require("mongoose");
 
 const paymentSchema = new mongoose.Schema({
@@ -12,7 +10,7 @@ const paymentSchema = new mongoose.Schema({
     default: "incomplete",
   },
   product: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: [mongoose.Schema.Types.ObjectId],
     ref: "Product"
   },
     buyer: {

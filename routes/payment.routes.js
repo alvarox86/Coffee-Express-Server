@@ -27,7 +27,7 @@ router.post("/create-payment-intent", async (req, res, next) => {
       status: "incomplete",
       paymentIntentId: paymentIntent.id,
       clientSecret: paymentIntent.client_secret,
-      // buyer: req.payload // example to add who bought the product (not done in this example)
+      buyer: req.payload // example to add who bought the product (not done in this example)
     })
 
     res.send({

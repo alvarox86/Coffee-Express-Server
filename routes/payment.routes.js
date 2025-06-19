@@ -6,6 +6,11 @@ const Payment = require("../models/Payment.model.js")
 
 router.post("/create-payment-intent", async (req, res, next) => {
 
+  console.log("req.body:", req.body);
+  
+  if (!req.body || !req.body[0] || !req.body[0]._id) {
+  return res.status(400).json({ error: "Invalid request body" });
+}
   const productId = req.body[0]._id;
 
   try {

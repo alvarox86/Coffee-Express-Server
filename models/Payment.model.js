@@ -15,10 +15,10 @@ const paymentSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "Product"
   },
-  // buyer: {
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   ref: "User"
-  // },
+    buyer: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User"
+  },
 });
 
 const Payment = mongoose.model("Payment", paymentSchema);

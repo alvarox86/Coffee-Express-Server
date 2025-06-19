@@ -76,4 +76,20 @@ router.patch("/cart/:productId/remove", verifyToken, async(req,res,next) => {
     }
 })
 
+router.patch("/cart/cleancart", verifyToken, async(req,res,next) => {
+    try {
+        const response = await User.findById(req.payload._id)
+        .select({cart:1})
+
+        await User.findByIdAndUpdate(req.payload._id,{
+            cart:[]
+        })
+        
+        console.log("Todo bien en ruta para borrar el carro")
+        res.status(201).json(response.cart)
+    } catch (error) {
+         next(error)
+    }
+})
+
 module.exports = router

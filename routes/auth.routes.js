@@ -8,8 +8,6 @@ const {verifyToken} = require("../middlewares/auth.middlewares")
 
 router.post("/signup", async(req,res,next) => {
 
-    console.log(req.body)
-
     const {email, password, username, phone, rol, adress, profilepicture} = req.body
 
     if (!username || !email || !password) {

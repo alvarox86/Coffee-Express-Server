@@ -1,8 +1,6 @@
 const jwt = require("jsonwebtoken")
 
 function verifyToken(req,res,next){
-    console.log("Ejecutando middleware")
-
     try {
     
     const tokenText = req.headers.authorization

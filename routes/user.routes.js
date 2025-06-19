@@ -9,7 +9,7 @@ router.get("/",verifyToken, async(req,res,next) =>{//En esta llamada no se hace 
         const response = await User.findById(req.payload._id)
         res.status(200).json(response)
     } catch (error) {
-        console.log(error)
+         next(error)
     }
 })
 
@@ -23,7 +23,7 @@ router.patch("/",verifyToken, async(req,res,next) =>{
         })
         res.status(200).json(response)
     } catch (error) {
-        console.log(error)
+         next(error)
     }
 })
 //Solicitamos el id mediante el payload para que sea seguro. Si lo pasamos por 
@@ -38,7 +38,7 @@ router.get("/cart",verifyToken, async(req,res,next) => {
         res.status(200).json(response.cart)
 
     } catch (error) {
-        console.log(error)
+         next(error)
     }
 })
 
@@ -50,7 +50,7 @@ router.patch("/cart/:productId/add", verifyToken, async(req,res,next) => {
         )
         res.status(201).json(response)
     } catch (error) {
-        console.log(error)
+        next(error)
     }
 })
 
@@ -72,7 +72,7 @@ router.patch("/cart/:productId/remove", verifyToken, async(req,res,next) => {
 
         res.status(201).json(response.cart)
     } catch (error) {
-        console.log(error)
+         next(error)
     }
 })
 

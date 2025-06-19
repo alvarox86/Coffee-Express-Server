@@ -25,7 +25,7 @@ router.post("/",verifyToken, verifyAdmin, async(req,res,next) =>{
         res.status(200).json(response)
         
     } catch (error) {
-        console.log(error)
+        next(error)
     }
 })
 
@@ -45,7 +45,7 @@ router.get("/:productId", async(req,res,next) =>{
         const response = await Product.findById(req.params.productId)
         res.status(200).json(response)
     } catch (error) {
-        console.log(error)
+         next(error)
     }
 })
 
@@ -54,7 +54,7 @@ router.get("/:productId/modify", verifyToken, verifyAdmin, async(req,res,next) =
         const response = await Product.findById(req.params.productId)
         res.status(200).json(response)
     } catch (error) {
-        console.log(error)
+         next(error)
     }
 })
 
@@ -75,7 +75,7 @@ router.put("/:productId", verifyToken, verifyAdmin, async(req,res,next) =>{
         })
         res.status(200).json(response)
     } catch (error) {
-        console.log(error)
+        next(error)
     }
 })
 
@@ -84,7 +84,7 @@ router.delete("/:productId", verifyToken, verifyAdmin, async(req,res,next) =>{
         const response = await Product.findByIdAndDelete(req.params.productId)
         res.status(200).json(response)
     } catch (error) {
-        console.log(error)
+        next(error)
     }
 })
 

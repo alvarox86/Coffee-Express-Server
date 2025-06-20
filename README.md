@@ -220,6 +220,6 @@ Review model
 
 ### Collaborators
 
-María Jiménez Sánchez
+[María Jiménez Sánchez](https://github.com/mariajs99)
 
-Alvaro Ruiz Monfillo
+[Alvaro Ruiz Monfillo](https://github.com/alvarox86)

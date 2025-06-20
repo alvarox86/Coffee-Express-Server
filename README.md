@@ -204,29 +204,22 @@ Review model
 | POST         | `/api/product`                  |                              | 200            | 401          |Create a new product (admin role required)                                     |
 | PUT         | `/api/product/:productId`                  |                              | 200            | 400, 401     | Edit product (creator admin only)                                       |
 | DELETE       | `/api/product/:productId`          |                              | 200            | 401          | Delete product (creator admin only)                                        |
-| GET         | `/gameApi`                  |                              | 200            | 401          | Gets game data from API (Search)                               |
-| GET         | `/gameApi/:apiId`           |                              | 200            | 401          | Gets game details from API                                     |
+| GET         | `/api/review/product/:productId`                  |                              | 200            | 401          | Get all reviews for a product                              |
+| POST         | `/api/review`           |                              | 200            | 401          | Create a review for a product (user logged in)    
+| POST   | /api/review                 | Headers + body (review data) - Create a review |
+| GET    | /api/review                 | View all reviews with their products |
+| DELETE | /api/review/:reviewId       | Headers - Delete own review     |
+| GET    | /api/user/cart              | Headers - Get current user's cart |
+| PATCH  | /api/user/cart/:productId/add    | Params - Add product to cart     |
+| PATCH  | /api/user/cart/:productId/remove | Headers - Remove product from cart |
+| POST   | /api/order                 | Headers + body {cart, paymentData} - Create new order with payment info |
+| GET    | /api/order/:orderId         | Headers - Get details of a specific order |                                |
   
+
 ## Links
 
 ### Collaborators
 
-[Developer 1 name](www.github-url.com)
+María Jiménez Sánchez
 
-[Developer 2 name](www.github-url.com)
-
-### Project
-
-[Repository Link Client](www.your-github-url-here.com)
-
-[Repository Link Server](www.your-github-url-here.com)
-
-[Deploy Link](www.your-deploy-url-here.com)
-
-### Trello
-
-[Link to your trello board](www.your-trello-url-here.com)
-
-### Slides
-
-[Slides Link](www.your-slides-url-here.com)
+Alvaro Ruiz Monfillo
